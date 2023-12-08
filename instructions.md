@@ -54,7 +54,7 @@ docker run <username>/wine-pred
 ```
 If we have another test file for testing (Testdataset.csv), we will mount the directory having the file to docker image and run it with this file as argument
 ```
-sudo docker run -v $(pwd):/files <username>/wine-pred spark-submit --class com.example.SparkMLInference --master yarn /files/spark-ml-1.0-SNAPSHOT.jar /files/TrainingDataset.csv
+sudo docker run -v $(pwd):/files <username>/wine-pred spark-submit inference.py /files/TrainingDataset.csv
 ```
 
 ### Phase 8: Perform Prediction without docker
